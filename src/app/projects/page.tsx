@@ -36,7 +36,7 @@ const page = () => {
     },
     {
       link: 'https://discord-clone-swaraj.vercel.app/',
-      image: '/projects/Discord.png',
+      image: '/projects/discord.png',
       name: 'Discord Clone',
       des: 'A working clone of the famous Discord is an American VoIP and instant messaging social platform.',
     },
