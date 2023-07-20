@@ -1,5 +1,3 @@
-'use client'
-
 import type { Metadata } from 'next'
 import Navbar, { NavbarSmall } from '../components/Navbar'
 import './globals.css'

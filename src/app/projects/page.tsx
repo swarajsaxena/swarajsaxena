@@ -4,8 +4,9 @@ import CreativeHoverEffect from '@/components/CreativeTextEffect'
 import { PageWrapper } from '@/components/PageWrapper'
 import Image from 'next/image'
 import React from 'react'
-import { AllButton } from '../page'
+// import { LinkButton } from '../page'
 import { motion } from 'framer-motion'
+import LinkButton from '@/components/LinkButton'
 
 const page = () => {
   const projects = [
@@ -53,7 +54,10 @@ const page = () => {
       </div>
       <div className='flex flex-col gap-4 md:gap-6'>
         {projects.map((p, index: number) => (
-          <>
+          <div
+            key={index}
+            className=''
+          >
             <motion.div
               initial={{ y: -50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
@@ -70,13 +74,13 @@ const page = () => {
                 />
               </div>
               <div className='flex flex-col gap-1'>
-                <div className='flex items-center gap-1 text-lg font-medium text-newBlack'>
+                <div className='flex items-center justify-between gap-1 text-lg font-medium text-newBlack'>
                   <CreativeHoverEffect
                     text={p.name}
                     delay={(1 + index / 4) * 1000}
                   />
                   <div className='text-xs'>
-                    <AllButton
+                    <LinkButton
                       link={p.link}
                       text='Link'
                     />
@@ -93,10 +97,10 @@ const page = () => {
                 initial={{ y: -50, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.7 + index / 5 }}
-                className='w-full h-[1px] bg-newGrey/50'
+                className='w-full h-[1px] mt-4 md:mt-6 bg-newGrey/50'
               />
             )}
-          </>
+          </div>
         ))}
       </div>
     </PageWrapper>

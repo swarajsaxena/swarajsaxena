@@ -59,8 +59,8 @@ const page = () => {
         <div className='flex'>
           <div className='w-[6px] bg-newGrey/30' />
           <div className='flex flex-col gap-4 py-2'>
-            {experiences.map((exp) => (
-              <div className='relative flex flex-col gap-1'>
+            {experiences.map((exp, index) => (
+              <div key={index} className='relative flex flex-col gap-1'>
                 <div className='absolute w-4 h-[2px] bg-gradient-to-r from-45% from-newGrey/30 to to-85% to-transparent top-3 -left-[0]  group-hover:scale-125 transition-all' />
                 <div className='flex items-center gap-2 pl-6 text-lg font-medium text-newBlack'>
                   <CreativeHoverEffect text={exp.title} />

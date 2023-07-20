@@ -7,6 +7,7 @@ import { ReactNode } from 'react'
 import Link from 'next/link'
 import CreativeHoverEffect from '@/components/CreativeTextEffect'
 import { tech } from './stack/page'
+import LinkButton from '@/components/LinkButton'
 
 function Row({ first, last }: { first: ReactNode; last: ReactNode }) {
   return (
@@ -17,18 +18,6 @@ function Row({ first, last }: { first: ReactNode; last: ReactNode }) {
       </div>
       {last}
     </div>
-  )
-}
-
-export function AllButton({ link, text }: { link: string; text: string }) {
-  return (
-    <Link
-      href={link}
-      className='flex items-center px-2 py-1 font-normal transition-all rounded-md cursor-pointer text-newBlack group hover:bg-newBlack/20'
-    >
-      <span>{text || 'All'}</span>
-      <FiChevronRight className='mr-[2px] group-hover:translate-x-1 transition-all' />
-    </Link>
   )
 }
 
@@ -66,7 +55,7 @@ export default function Home() {
       <div className='flex flex-col gap-2'>
         <div className='flex items-center justify-between text-lg font-medium text-newBlack'>
           <CreativeHoverEffect text='Where To find me' />
-          {/* <AllButton text='All' link='/experience' /> */}
+          {/* <LinkButton text='All' link='/experience' /> */}
         </div>
         <div className='flex flex-col gap-2'>
           <Row
@@ -98,12 +87,10 @@ export default function Home() {
       <div className='flex flex-col gap-2'>
         <div className='flex items-center justify-between text-lg font-medium text-newBlack'>
           <CreativeHoverEffect text='Experience' />
-          <div className='text-base'>
-            <AllButton
-              text='All'
-              link='/experience'
-            />
-          </div>
+          <LinkButton
+            text='All'
+            link='/experience'
+          />
         </div>
         <div className='flex flex-col gap-2'>
           <Row
@@ -119,12 +106,10 @@ export default function Home() {
       <div className='flex flex-col gap-2'>
         <div className='flex items-center justify-between text-lg font-medium text-newBlack'>
           <CreativeHoverEffect text='My Projects' />
-          <div className='text-base'>
-            <AllButton
-              text='All'
-              link='/projects'
-            />
-          </div>
+          <LinkButton
+            text='All'
+            link='/projects'
+          />
         </div>
         <div className='flex flex-col gap-2'>
           <Row
@@ -144,16 +129,15 @@ export default function Home() {
       <div className='flex flex-col gap-2'>
         <div className='flex items-center justify-between text-lg font-medium text-newBlack'>
           <CreativeHoverEffect text='My Stack' />
-          <div className='text-base'>
-            <AllButton
-              text='All'
-              link='/stack'
-            />
-          </div>
+          <LinkButton
+            text='All'
+            link='/stack'
+          />
         </div>
         <div className='flex flex-wrap gap-6'>
-          {tech.map((t) => (
+          {tech.map((t, index) => (
             <Image
+              key={index}
               src={t.path}
               width={60}
               height={60}
