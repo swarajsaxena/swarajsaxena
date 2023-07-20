@@ -6,23 +6,29 @@ import Image from 'next/image'
 import React from 'react'
 import { motion } from 'framer-motion'
 
-export const tech = [
-  { path: '/tech/brave.png', name: 'Brave', use: 'Browsing' },
-  { path: '/tech/figma.png', name: 'Figma', use: 'Design' },
-  { path: '/tech/framer.png', name: 'Framer', use: 'No Code' },
-  { path: '/tech/insta.png', name: 'Instagram', use: 'Social Media' },
-  { path: '/tech/node.png', name: 'Node', use: 'Backend' },
-  {
-    path: '/tech/premierepro.png',
-    name: 'Premiere Pro',
-    use: 'Video Editing',
-  },
-  { path: '/tech/react.png', name: 'React', use: 'Frontend' },
-  // { path: '/tech/reactrouter.png', name: 'ReactRouter', use: '' },
-  { path: '/tech/tailwind.png', name: 'Tailwind CSS', use: 'Styling' },
-  { path: '/tech/vscode.png', name: 'VS Code', use: 'Code Editor' },
-]
+interface techI {
+  path: string
+  name: string
+  use: string
+}
+
 const page = () => {
+  const tech = [
+    { path: '/tech/brave.png', name: 'Brave', use: 'Browsing' },
+    { path: '/tech/figma.png', name: 'Figma', use: 'Design' },
+    { path: '/tech/framer.png', name: 'Framer', use: 'No Code' },
+    { path: '/tech/insta.png', name: 'Instagram', use: 'Social Media' },
+    { path: '/tech/node.png', name: 'Node', use: 'Backend' },
+    {
+      path: '/tech/premierepro.png',
+      name: 'Premiere Pro',
+      use: 'Video Editing',
+    },
+    { path: '/tech/react.png', name: 'React', use: 'Frontend' },
+    // { path: '/tech/reactrouter.png', name: 'ReactRouter', use: '' },
+    { path: '/tech/tailwind.png', name: 'Tailwind CSS', use: 'Styling' },
+    { path: '/tech/vscode.png', name: 'VS Code', use: 'Code Editor' },
+  ]
   return (
     <PageWrapper>
       <div className='flex flex-col gap-4'>
@@ -56,7 +62,10 @@ const page = () => {
                 />
               </div>
               <div className='flex flex-col text-sm font-medium'>
-                <CreativeHoverEffect className='text-newBlack' text={t.name} />
+                <CreativeHoverEffect
+                  className='text-newBlack'
+                  text={t.name}
+                />
                 <div>{t.use}</div>
               </div>
             </motion.div>
