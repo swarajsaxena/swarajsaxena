@@ -82,6 +82,7 @@ const page = () => {
                   <div>{p.name}</div>
                   <div className='text-xs'>
                     <LinkButton
+                      target={true}
                       link={p.link}
                       text='Link'
                     />
@@ -93,14 +94,14 @@ const page = () => {
                 </span>
               </div>
             </motion.div>
-            {index !== projects.length - 1 && (
+            {/* {index !== projects.length - 1 && (
               <motion.div
                 initial={{ y: -50, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.7 + index / 5 }}
                 className='w-full h-[1px] mt-4 md:mt-6 bg-newGrey/50'
               />
-            )}
+            )} */}
           </div>
         ))}
       </div>
