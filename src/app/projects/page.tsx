@@ -75,10 +75,11 @@ const page = () => {
               </div>
               <div className='flex flex-col gap-1'>
                 <div className='flex items-center justify-between gap-1 text-lg font-medium text-newBlack'>
-                  <CreativeHoverEffect
+                  {/* <CreativeHoverEffect
                     text={p.name}
                     delay={(1 + index / 4) * 1000}
-                  />
+                  /> */}
+                  <div>{p.name}</div>
                   <div className='text-xs'>
                     <LinkButton
                       link={p.link}
