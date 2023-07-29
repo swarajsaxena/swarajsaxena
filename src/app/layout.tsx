@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import Navbar, { NavbarSmall } from '../components/Navbar'
 import './globals.css'
 import { AnimatePresence, motion } from 'framer-motion'
+import Script from 'next/script'
+import { Analytics } from '@vercel/analytics/react'
 
 export const metadata: Metadata = {
   title: 'Swaraj Saxena',
@@ -20,7 +22,16 @@ export default function RootLayout({
           {children}
         </div>
         <NavbarSmall />
+        <Analytics />
       </body>
+      <Script src='https://www.googletagmanager.com/gtag/js?id=G-90N70RJLQ2'></Script>
+      <Script id='google-analytics'>
+        {`window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-90N70RJLQ2');`}
+      </Script>
     </html>
   )
 }
