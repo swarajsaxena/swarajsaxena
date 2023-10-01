@@ -35,15 +35,6 @@ With a strong foundation in web and app development and a keen interest in cyber
 [<img align="left" alt="Terminal" width="26px" src="https://raw.githubusercontent.com/codeSTACKr/codeSTACKr/master/img/terminal-dark.svg" />](https://github.com/swarajsaxena/#gh-dark-mode-only)
 [<img align="left" alt="Terminal" width="26px" src="https://raw.githubusercontent.com/codeSTACKr/codeSTACKr/master/img/terminal-light.svg" />](https://github.com/swarajsaxena/?hl=en#gh-light-mode-only)
 
-<br />
-
----
-
-<br />
-<h3>GitHub Stats</h3>
-
-<img align="left" alt="Austin's GitHub Stats" src="https://github-readme-stats.vercel.app/api?username=swarajsaxena&show_icons=true&hide_border=false&title_color=ff652f&icon_color=FFE400&bg_color=09131B&text_color=ffffff&border_color=0c1a25" />
-
 [github]: https://github.com/swarajsaxena
 [blank]: #
 [website]: #
