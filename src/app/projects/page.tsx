@@ -11,6 +11,12 @@ import LinkButton from '@/components/LinkButton'
 const page = () => {
   const projects = [
     {
+      link: 'https://inkit.vercel.app/',
+      image: '/projects/inkit.png',
+      name: 'Ink It',
+      des: 'Crafting collaborative brilliance, Ink It transforms teamwork. Innovative note-taking, where ideas flow freely, fusing productivity with creativity.',
+    },
+    {
       link: 'https://blendr.vercel.app/',
       image: '/projects/blendr.png',
       name: 'BlendR',
@@ -34,21 +40,15 @@ const page = () => {
       name: 'Hotstar Clone',
       des: 'A working clone of the famous Disney Hotstar Streaming Platform',
     },
-    {
-      link: 'https://discord-clone-swaraj.vercel.app/',
-      image: '/projects/discord.png',
-      name: 'Discord Clone',
-      des: 'A working clone of the famous Discord is an American VoIP and instant messaging social platform.',
-    },
   ]
   return (
     <PageWrapper>
-      <div className='flex flex-col gap-4 '>
+      <div className='flex flex-col gap-2 md:gap-4 '>
         <CreativeHoverEffect
           className='text-sm font-medium'
           text='Projects'
         />
-        <div className='text-2xl font-medium'>
+        <div className='text-lg md:text-2xl font-medium'>
           Things I <span className='font-bold text-newBlack'>made</span>
         </div>
       </div>
@@ -62,9 +62,9 @@ const page = () => {
               initial={{ y: -50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.7 + index / 5 }}
-              className={`flex items-start justify-start gap-4 group`}
+              className={`flex items-start justify-start gap-2 md:gap-4 group`}
             >
-              <div className='relative h-12 md:h-28 border-2 rounded-md min-w-[48px] md:min-w-[112px] bg-newGrey/10 group-hover:border-newBlack/50 transition-all'>
+              <div className='relative h-12 mt-2 md:mt-0 md:h-28 border-2 rounded-md min-w-[48px] md:min-w-[112px] bg-newGrey/10 group-hover:border-newBlack/50 transition-all'>
                 <Image
                   src={p.image}
                   alt={p.name}
@@ -73,13 +73,13 @@ const page = () => {
                   className='transition-all group-hover:scale-125'
                 />
               </div>
-              <div className='flex flex-col gap-1'>
-                <div className='flex items-center justify-between gap-1 text-lg font-medium text-newBlack'>
-                  {/* <CreativeHoverEffect
+              <div className='flex flex-col md:gap-1'>
+                <div className='flex items-center justify-between gap-1 text-base md:text-lg font-medium text-newBlack'>
+                  <CreativeHoverEffect
                     text={p.name}
                     delay={(1 + index / 4) * 1000}
-                  /> */}
-                  <div>{p.name}</div>
+                  />
+                  {/* <div>{p.name}</div> */}
                   <div className='text-xs'>
                     <LinkButton
                       target={true}
@@ -88,7 +88,7 @@ const page = () => {
                     />
                   </div>
                 </div>
-                <span className='text-sm'>
+                <span className='text-xs md:text-sm'>
                   {p.des ||
                     'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam numquam eveniet, ut dicta error rerum aliquid cumqueatque vel quaerat id rem nemo ratione non reprehenderit eius?'}
                 </span>

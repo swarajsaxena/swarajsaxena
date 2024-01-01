@@ -15,7 +15,7 @@ export const PageWrapper = ({
     animate={{ opacity: 1, y: 0 }}
     exit={{ opacity: 0, y: 20 }}
     className={classNames(
-      'min-h-screenHeightWithoutHeader  flex flex-col gap-8 px-4',
+      'min-h-screenHeightWithoutHeader flex flex-col gap-4 md:gap-8 px-2 md:px-4',
       className
     )}
     transition={{ duration: 0.4 }}

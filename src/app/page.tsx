@@ -54,11 +54,11 @@ export default function Home() {
         </div>
       </div>
       <div className='flex flex-col gap-2'>
-        <div className='text-2xl font-medium '>
+        <div className='text-xl md:text-2xl font-medium '>
           Transforming Ideas into{' '}
           <span className='font-bold text-newBlack'> Digital Reality!</span>
         </div>
-        <div className='text-lg'>
+        <div className='text-base md:text-lg'>
           With a strong foundation in web and app development and a keen
           interest in cybersecurity, I am a versatile and adaptable software
           developer with two years of experience. Whether working on a new
@@ -68,9 +68,8 @@ export default function Home() {
         </div>
       </div>
       <div className='flex flex-col gap-2'>
-        <div className='flex items-center justify-between text-lg font-medium text-newBlack'>
+        <div className='flex items-center justify-between text-base md:text-lg font-medium text-newBlack'>
           <CreativeHoverEffect text='Where To find me' />
-          {/* <LinkButton text='All' link='/experience' /> */}
         </div>
         <div className='flex flex-col gap-2'>
           <Row
@@ -100,7 +99,7 @@ export default function Home() {
         </div>
       </div>
       <div className='flex flex-col gap-2'>
-        <div className='flex items-center justify-between text-lg font-medium text-newBlack'>
+        <div className='flex items-center justify-between text-base md:text-lg font-medium text-newBlack'>
           <CreativeHoverEffect text='Experience' />
           <LinkButton
             text='All'
@@ -119,7 +118,7 @@ export default function Home() {
         </div>
       </div>
       <div className='flex flex-col gap-2'>
-        <div className='flex items-center justify-between text-lg font-medium text-newBlack'>
+        <div className='flex items-center justify-between text-base md:text-lg font-medium text-newBlack'>
           <CreativeHoverEffect text='My Projects' />
           <LinkButton
             text='All'
@@ -142,7 +141,7 @@ export default function Home() {
         </div>
       </div>
       <div className='flex flex-col gap-2'>
-        <div className='flex items-center justify-between text-lg font-medium text-newBlack'>
+        <div className='flex items-center justify-between text-base md:text-lg font-medium text-newBlack'>
           <CreativeHoverEffect text='My Stack' />
           <LinkButton
             text='All'

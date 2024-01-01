@@ -31,12 +31,12 @@ const page = () => {
   ]
   return (
     <PageWrapper>
-      <div className='flex flex-col gap-4'>
+      <div className='flex flex-col gap-2 md:gap-4'>
         <CreativeHoverEffect
           className='text-sm font-medium'
           text='Stack'
         />
-        <div className='text-2xl font-medium'>
+        <div className='text-lg md:text-2xl font-medium'>
           Things I <span className='font-bold text-newBlack'>use</span>
         </div>
         <div className='grid grid-cols-1 gap-2 sm:gap-4 sm:grid-cols-2'>

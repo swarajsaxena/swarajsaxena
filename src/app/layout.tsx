@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className='relative flex justify-center min-h-screen p-4 capitalize text-newGrey bg-zinc-50'>
+      <body className='relative flex justify-center min-h-screen p-1 md:p-4 capitalize text-newGrey bg-zinc-50'>
         <div className='relative w-full max-w-xl pt-8 mb-20'>
           <Navbar />
           {children}

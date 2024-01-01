@@ -5,13 +5,13 @@ import React from 'react'
 
 const experiences = [
   {
-    title: 'Web Development Consultant',
-    time: '09/2021 - 11/2021',
-    company: 'SriMitra India • New Delhi, Delhi',
-    site: 'https://srimitraindia.com/',
+    title: 'Frontend Developer Intern',
+    time: '(08/2022 - 2/2023)',
+    company: 'Outmarch • New Delhi, Delhi',
+    site: 'https://www.outmarch.io/',
     responsibilities: [
-      'Website and software application designing, building, or maintaining.',
-      'Identifying problems uncovered by customers and testing, and correcting or problems to appropriate personnel for correction.',
+      'Developing user interface components and implementing them following well-known React.js workflows such as Redux or React Native Framework for mobile app development',
+      'Translating designs and wireframes into high-quality.',
     ],
   },
   {
@@ -26,13 +26,13 @@ const experiences = [
     ],
   },
   {
-    title: 'Frontend Developer Intern',
-    time: '(08/2022 - 2/2023)',
-    company: 'Outmarch • New Delhi, Delhi',
-    site: 'https://www.outmarch.io/',
+    title: 'Web Development Consultant',
+    time: '09/2021 - 11/2021',
+    company: 'SriMitra India • New Delhi, Delhi',
+    site: 'https://srimitraindia.com/',
     responsibilities: [
-      'Developing user interface components and implementing them following well-known React.js workflows such as Redux or React Native Framework for mobile app development',
-      'Translating designs and wireframes into high-quality.',
+      'Website and software application designing, building, or maintaining.',
+      'Identifying problems uncovered by customers and testing, and correcting or problems to appropriate personnel for correction.',
     ],
   },
 ]
@@ -40,10 +40,10 @@ const experiences = [
 const page = () => {
   return (
     <PageWrapper>
-      <div className='text-2xl font-medium'>
+      <div className='text-lg md:text-2xl font-medium'>
         <CreativeHoverEffect text='Experience' />
       </div>
-      <div className='w-full p-2 bg-newBlack/20 rounded-xl'>
+      <div className='w-full p-1 md:p-2 bg-newBlack/20 rounded-xl'>
         <div className='w-full aspect-[2/1] border border-newBlack/20 overflow-hidden relative rounded-lg'>
           <Image
             src={'/work.jpg'}
@@ -55,14 +55,14 @@ const page = () => {
         </div>
       </div>
       <div className='flex flex-col items-start gap-2'>
-        <div>Places I have worked in</div>
+        <div className='text-base md:text-lg'>Places I have worked in</div>
         <div className='flex'>
           <div className='w-[6px] bg-newGrey/30' />
           <div className='flex flex-col gap-4 py-2'>
             {experiences.map((exp, index) => (
               <div key={index} className='relative flex flex-col gap-1'>
                 <div className='absolute w-4 h-[2px] bg-gradient-to-r from-45% from-newGrey/30 to to-85% to-transparent top-3 -left-[0]  group-hover:scale-125 transition-all' />
-                <div className='flex items-center gap-2 pl-6 text-lg font-medium text-newBlack'>
+                <div className='flex items-center gap-2 pl-6 text-sm md:text-lg font-medium text-newBlack'>
                   <CreativeHoverEffect text={exp.title} />
                   <div className='w-4 h-[2px] bg-gradient-to-r from-45% from-newGrey/30 to to-85% to-transparent group-hover:scale-125 transition-all flex-1' />
                 </div>
