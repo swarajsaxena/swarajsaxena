@@ -58,9 +58,9 @@ export const NavbarSmall = () => {
   let refArray = links.map(() => useRef<HTMLDivElement>(null))
 
   return (
-    <div className='absolute top-0 z-50 flex flex-col justify-end h-full md:hidden'>
+    <div className='absolute top-0 z-50 flex flex-col justify-end h-full md:hidden pointer-events-none'>
       <div className='sticky bottom-4'>
-        <div className='flex items-center gap-1 p-2 mx-auto bg-white border rounded-full shadow-lg border-newGrey/20'>
+        <div className='flex items-center gap-1 p-2 mx-auto bg-white border rounded-full shadow-lg border-newGrey/20 pointer-events-auto'>
           {refArray.map((ref, i) => (
             <AppIcon
               activePath={pathname}
